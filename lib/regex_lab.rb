@@ -15,6 +15,5 @@ def first_word_capitalized_and_ends_with_punctuation?(text)
 end
 
 def valid_phone_number?(phone)
-  only_numbers = phone.scan(/\d/).join
-  !!only_numbers.scan(/\d{10}/)
+  !!phone.scan([\d\-()]+{10})
 end
